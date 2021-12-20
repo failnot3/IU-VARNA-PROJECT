@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ценова листа</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+<body>
+ <style>
+
+     /*карта*/
+     #map{
+        
+        text-align: center;
+        width:600px;
+        margin : auto;
+     }
+     h2{
+         padding: 3%;
+     }
+
+
+/*Навигация*/
+
+#logo{
+    width:65px;
+    position:relative;
+    top:-10px;
+    }
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, Tahoma, Serif;
+  color: #000000;
+}
+
+nav {
+  display: flex;
+  justify-content:space-between; 
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #061221; 
+}
+
+nav ul {
+  display: flex;
+  list-style: none; 
+}
+
+nav li {
+  padding-left: 1rem; 
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+ /* 
+  Малки устройства (телефони, 600px и по-малко) 
+*/
+@media only screen and (max-width: 600px) {
+  nav {
+    flex-direction: column;
+  }
+  nav ul {
+    flex-direction: column;
+    padding-top: 0.5rem;
+  }
+  nav li {
+    padding: 0.5rem 0;
+  }
+} 
+    
+    /* Предупреждение */
+    #warn{
+    color: white;
+    background-color: rgb(236, 103, 103);
+}
+
+/* Кратко представяне */
+    /*Кратко представяне*/
+    .aboutus{
+    display:flex;
+    align-items:center;
+    margin:2rem 0;
+    }
+    
+    .aboutus section{
+    position:relative;
+    width:100%;
+    padding:4rem;
+    }
+    
+    .aboutus section:nth-child(2){
+    padding:4rem 2rem;
+    }
+    
+    .aboutus section img:nth-child(1){
+    width:70%;
+    border:5px solid #fff;
+    border-radius:5px;
+    }
+    
+    .aboutus section img:nth-child(2){
+    position:absolute;
+    right:15%;
+    bottom:5%;
+    width:40%;
+    border:5px solid #fff;
+    }
+    
+    .aboutus .title{
+    font-size:3em;
+    line-height:0em;
+    }
+    
+    .aboutus h3{
+    font-weight:400;
+    }
+    
+    .aboutus p{
+    font-size:20px;
+    color:rgba(1,1,1,0.7);
+    }
+    
+    .aboutus .btn1{
+    display:block;
+    }
+    
+    @media (max-width:820px){
+    .aboutus{
+    display:block;
+    }
+    
+    .aboutus section{
+    padding:1rem;
+    }
+    
+    .aboutus section:nth-child(2){
+    padding:4rem 1rem;
+    }
+    
+    .aboutus .title{
+    font-size:1.8em;
+    }
+    
+    .aboutus p{
+    font-size:18px;
+    }
+    }
+    
+ </style>
+<script>
+    function myFunction() {
+    var x = document.getElementById("warn");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+}
+</script>
+     <!--Предупреждение-->
+     <header id="warn">    
+        <h4>
+        Тaзи страница е изключително и само с демонстрационна цел! За целите на курсов проект на студенти от ИУ-Варна.
+        Потвърждавам че това не е реална контактна форма:     <button onclick="myFunction()">Потвърждавам!</button>
+        
+    </h4>
+    </header>
+<!--Навигация-->
+
+<nav>
+    <a href="index.html"><img id="logo" src="Artboardlogo.png" alt=""></a>
+    <ul>
+      <li><a href="index.html">Начало</a></li>
+      <li><a href="contact.html">Връзка с нас</a></li>
+    </ul>
+  </nav>
+
+<!--За нас подробно-->
+<div class="aboutus">
+    <h1>Кои сме ние?</h1>
+    <section>
+        <p> ConcertMe е основана през 2017г. с идеята, да направи всяко едно събитие неповторимо.</p>
+        <p>Зад ConcertMe стои регистрираната по Търговския закон фирма "КонцертЗаМен" ООД с ЕИК 999 999 999</p>
+    </section>
+    </div>
+<div class="aboutus">
+    <h1>Как можете да се свържете с нас?</h1>
+    <section>
+        <p> Чрез Email адрес: <a href="emailto:"><i class="fa fa-envelope"></i> info@demo.scalesbg.eu</a></p>
+        <p>На мобилен телефон <a href="tel:"><i class="fa fa-phone"></i> (+359) 87 777 888</a></p>
+    </section>
+    </div>
+
+<!--Карта -->
+
+<div id="map">   
+    <h2>Къде се намираме:</h2>
+
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1121.2005210310665!2d27.923137094298095!3d43.208769725432695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a4540939dfa6d5%3A0x3d401ef3c09a59bf!2z0JjQutC-0L3QvtC80LjRh9C10YHQutC4INGD0L3QuNCy0LXRgNGB0LjRgtC10YIgLSDQktCw0YDQvdCw!5e0!3m2!1sbg!2sbg!4v1640005000544!5m2!1sbg!2sbg" width="600" height="510" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>
+   
+      <!--Допълнително-->
+<a href="#" id="roll_back" class="animate"><i class="fa fa-angle-up"></i></a>
+
+<script type="text/javascript" src="js/custom.js"></script>
+</body>
+</html>

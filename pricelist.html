@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ценова листа</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+ <style>
+
+
+
+     * {
+  box-sizing: border-box;
+}
+
+/* Три колони с еднаква широчина */
+.columns {
+  float: left;
+  width: 33.3%;
+  padding: 8px;
+}
+
+/* Стил на листинга */
+.price {
+  list-style-type: none;
+  border: 1px solid #eee;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+/* Добавяне на сенки, когато минеш с мишката отгоре */
+.price:hover {
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+/* Заглавие на листинга */
+.price .header {
+  background-color: #061221;
+  color: white;
+  font-size: 25px;
+}
+
+/* Артикули */
+.price li {
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Сиви артикули */
+.price .grey {
+  background-color: #eee;
+  font-size: 20px;
+}
+
+/* Бутон свържи се с нас! */
+.button {
+  background-color: #e30846;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 600px) {
+  .columns {
+    width: 100%;
+  }
+}
+
+/*Навигация*/
+
+#logo{
+    width:65px;
+    position:relative;
+    top:-10px;
+    }
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, Tahoma, Serif;
+  color: #9ca2a5;
+}
+
+nav {
+  display: flex;
+  justify-content:space-between; 
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #061221; 
+}
+
+nav ul {
+  display: flex;
+  list-style: none; 
+}
+
+nav li {
+  padding-left: 1rem; 
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+ /* 
+  Малки устройства (телефони, 600px и по-малко) 
+*/
+@media only screen and (max-width: 600px) {
+  nav {
+    flex-direction: column;
+  }
+  nav ul {
+    flex-direction: column;
+    padding-top: 0.5rem;
+  }
+  nav li {
+    padding: 0.5rem 0;
+  }
+} 
+    
+    /* Предупреждение */
+    #warn{
+    color: white;
+    background-color: rgb(236, 103, 103);
+}
+ </style>
+<script>
+    function myFunction() {
+    var x = document.getElementById("warn");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+}
+</script>
+     <!--Предупреждение-->
+     <header id="warn">    
+        <h4>
+        Тaзи страница е изключително и само с демонстрационна цел! За целите на курсов проект на студенти от ИУ-Варна.
+        Потвърждавам че това не е реална ценова листа:     <button onclick="myFunction()">Потвърждавам!</button>
+        
+    </h4>
+    </header>
+<!--Навигация-->
+
+<nav>
+    <a href="index.html"><img id="logo" src="Artboardlogo.png" alt=""></a>
+    <ul>
+      <li><a href="index.html">Начало</a></li>
+    </ul>
+  </nav>
+
+<!--Ценова листа -->
+
+    <div class="columns">
+        <ul class="price">
+          <li class="header">Основен пакет</li>
+          <li>Подходящ за малки и средни събития.</li>
+          <li>С техника от клиента</li>
+          <li>Без рекламни материали.</li>
+          <li></li>
+          <li class="grey">100лв</li>
+          <li class="grey"><a href="contact.html" class="button">Свържи се с нас!</a></li>
+        </ul>
+      </div>
+      <div class="columns">
+        <ul class="price">
+          <li class="header">Медиум пакет</li>
+          <li>Подходящ за средни и големи събития.</li>
+          <li>С техника от клиента</li>
+          <li>Включва рекламни материали.</li>
+          <li></li>
+          <li class="grey">200лв</li>
+          <li class="grey"><a href="contact.html" class="button">Свържи се с нас!</a></li>
+        </ul>
+      </div>
+      <div class="columns">
+        <ul class="price">
+          <li class="header">Премиум пакет</li>
+          <li>Подходящ за големи събития</li>
+          <li>С техника от ConcertMe</li>
+          <li>Включва рекламни материали.</li>
+          <li></li>
+          <li class="grey">300лв</li>
+          <li class="grey"><a href="contact.html" class="button">Свържи се с нас!</a></li>
+        </ul>
+      </div>     
+      <!--Допълнително-->
+<a href="#" id="roll_back" class="animate"><i class="fa fa-angle-up"></i></a>
+
+<script type="text/javascript" src="js/custom.js"></script>
+</body>
+</html>

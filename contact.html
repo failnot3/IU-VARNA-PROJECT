@@ -91,12 +91,69 @@ form > input[type="submit"]:hover {
     text-decoration: dotted;
     color: rgb(133, 23, 23);
 }
+#logo{
+    width:65px;
+    position:relative;
+    top:-10px;
+    }
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, Tahoma, Serif;
+  color: #9ca2a5;
+}
+
+nav {
+  display: flex;
+  justify-content:space-between; 
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #061221; 
+}
+
+nav ul {
+  display: flex;
+  list-style: none; 
+}
+
+nav li {
+  padding-left: 1rem; 
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+ /* 
+  Малки устройства (телефони, 600px и по-малко) 
+*/
+@media only screen and (max-width: 600px) {
+  nav {
+    flex-direction: column;
+  }
+  nav ul {
+    flex-direction: column;
+    padding-top: 0.5rem;
+  }
+  nav li {
+    padding: 0.5rem 0;
+  }
+} 
     </style>
 </head>
 <div>
-    <h3 class="back">Кликнете върху логото 
-       за да се върнете назад.</h3>
-    <a href="index.html"><img id="logo" src="Artboardlogo.png" alt="лого и бутон към началото"></a>
+  <nav>
+    <a href="index.html"><img id="logo" src="Artboardlogo.png" alt=""></a>
+    <ul>
+      <li><a href="index.html">Начало</a></li>
+    </ul>
+  </nav>
+
 </div>
 
 <body>
